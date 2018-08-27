@@ -6,10 +6,9 @@
 # Filenames should NOT have spaces
 * *
 
-# Ignore build files
+# Ignore build, dist and log files
 build/
-
-# Ignore log files
+dist/
 logs/
 
 # Cache folders created by Gramex
