@@ -52,9 +52,9 @@
 </ul>
 <h2><a href="https://www.paypal.me/harshenpandey/">Help the project</a></h2><p>This project is looking for help! <a href="https://www.paypal.me/harshenpandey/">You can donate through Paypal</a>
 and help spread the word. If you've used the plugin, or plan to use, consider a donation - any amount will help.</p>
-<h2 id="table-of-contents">Table of contents</h2><ul>
+<h2>Table of contents</h2><ul>
 <li><a href="#features">Features</a></li>
-<li><a href="#maindoc">Main</a></li>
+<li><a href="#main">Main</a></li>
 <li><a href="#getting-started">Getting started</a></li>
 <li><a href="#options">Options</a></li>
 <li><a href="#methods">Methods</a></li>
@@ -64,7 +64,7 @@ and help spread the word. If you've used the plugin, or plan to use, consider a 
 <li><a href="#support">Support</a></li>
 <li><a href="#license">License</a></li>
 </ul>
-<h2 id="features">Features</h2><ul>
+<h2>Features</h2><ul>
 <li>Supports jQuery v1.5+</li>
 <li>Supports 27 <a href="#options">options</a></li>
 <li>Supports 5 <a href="#methods">methods</a></li>
@@ -78,7 +78,7 @@ and help spread the word. If you've used the plugin, or plan to use, consider a 
 <li>Cross-browser support</li>
 </ul>
 <p><a href="#table-of-contents">⬆ back to top</a></p>
-<h2 id="maindoc">Main</h2><pre class="prettyprint source lang-text"><code>dist/
+<h2>Main</h2><pre class="prettyprint source lang-text"><code>dist/
 ├── js/
 |   ├── jQuery.countdownTimer.js   (37.16 kB)
 |   ├── jQuery.countdownTimer.min.js   (compressed - 18.28 kB)
@@ -86,7 +86,7 @@ and help spread the word. If you've used the plugin, or plan to use, consider a 
 |       └── jQuery.countdownTimer-[region-code].js (regional language support js files)
 ├── css/
     └── jQuery.countdownTimer.css</code></pre><p><a href="#table-of-contents">⬆ back to top</a></p>
-<h2 id="getting-started">Getting Started</h2><h3>Install</h3><pre class="prettyprint source lang-shell"><code>npm install countdowntimer</code></pre><h3>Include files</h3><p>Include jQuery, the plugin and its css file on a page.</p>
+<h2>Getting Started</h2><h3>Install</h3><pre class="prettyprint source lang-shell"><code>npm install countdowntimer</code></pre><h3>Include files</h3><p>Include jQuery, the plugin and its css file on a page.</p>
 <pre class="prettyprint source lang-html"><code>&lt;script type=&quot;text/javascript&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;>&lt;/script>
 &lt;script type=&quot;text/javascript&quot; src=&quot;js/jQuery.countdownTimer.js&quot;>&lt;/script>
 &lt;!-- Good alternative is to include minified file jQuery.countdownTimer.min.js -->
@@ -131,7 +131,7 @@ and help spread the word. If you've used the plugin, or plan to use, consider a 
 </li>
 </ul>
 <p><a href="#table-of-contents">⬆ back to top</a></p>
-<h2 id="options">Options</h2><h3>Overview</h3><p>Following are the different options provided for initialising the <code>countdowntimer</code> method with their default values.</p>
+<h2>Options</h2><h3>Overview</h3><p>Following are the different options provided for initialising the <code>countdowntimer</code> method with their default values.</p>
 <pre class="prettyprint source lang-js"><code>hours                    : 0                                // Set hours.
 minutes                  : 0                                // Set minutes.
 seconds                  : 60                               // Set seconds.
@@ -357,7 +357,7 @@ isRTL                    : false</code></pre><h3>Details</h3><h4>hours</h4><ul>
 <li>Set to true for languages that read right-to-left, or false for left-to-right. Included in regionalOptions. For regionalOptions to function, include the localisation js file after the plugin js file.</li>
 </ul>
 <p><a href="#table-of-contents">⬆ back to top</a></p>
-<h2 id="methods">Methods</h2><h4>pause</h4><ul>
+<h2>Methods</h2><h4>pause</h4><ul>
 <li><p>Use it to Pause / Resume the user defined countdowntimer (hours, minutes, seconds timer).</p>
 <pre class="prettyprint source lang-js"><code>  jQuery(&quot;#hms_timer&quot;).countdowntimer(&quot;pause&quot;, &quot;pause&quot;);
   jQuery(&quot;#hms_timer&quot;).countdowntimer(&quot;pause&quot;, &quot;resume&quot;);</code></pre></li>
@@ -372,7 +372,7 @@ isRTL                    : false</code></pre><h3>Details</h3><h4>hours</h4><ul>
 <pre class="prettyprint source lang-js"><code>  jQuery(&quot;#hms_timer&quot;).countdowntimer(&quot;destroy&quot;);</code></pre></li>
 </ul>
 <p><a href="#table-of-contents">⬆ back to top</a></p>
-<h2 id="usage-examples">Usage examples</h2><p>Following are the different code samples for using <code>countdowntimer</code> method.</p>
+<h2>Usage examples</h2><p>Following are the different code samples for using <code>countdowntimer</code> method.</p>
 <ul>
 <li><p>Reverse countdown till a specific future date from today. (for eg:- 2020/01/01 00:00:00)</p>
 <pre class="prettyprint source lang-js"><code>  $(function(){
@@ -502,7 +502,7 @@ isRTL                    : false</code></pre><h3>Details</h3><h4>hours</h4><ul>
   });</code></pre></li>
 </ul>
 <p><a href="#table-of-contents">⬆ back to top</a></p>
-<h2 id="browser-support">Browser support</h2><ul>
+<h2>Browser support</h2><ul>
 <li>Chrome (latest)</li>
 <li>Firefox (latest)</li>
 <li>Safari (latest)</li>
@@ -512,11 +512,11 @@ isRTL                    : false</code></pre><h3>Details</h3><h4>hours</h4><ul>
 </ul>
 <p>As a jQuery plugin, you also need to see the <a href="http://jquery.com/browser-support/">jQuery Browser Support</a>.</p>
 <p><a href="#table-of-contents">⬆ back to top</a></p>
-<h2 id="dependencies">Dependencies</h2><p>jQuery greater than or equal to version 1.5.</p>
+<h2>Dependencies</h2><p>jQuery greater than or equal to version 1.5.</p>
 <p><a href="#table-of-contents">⬆ back to top</a></p>
-<h2 id="support">Support</h2><p>Please post bug reports and other contributions (enhancements, features) to the GitHub issue tracker.</p>
+<h2>Support</h2><p>Please post bug reports and other contributions (enhancements, features) to the GitHub issue tracker.</p>
 <p><a href="#table-of-contents">⬆ back to top</a></p>
-<h2 id="license">License</h2><p>Copyright © <a href="https://remote.com/harshen">Harshen Pandey</a></p>
+<h2>License</h2><p>Copyright © <a href="https://remote.com/harshen">Harshen Pandey</a></p>
 <p>Licensed under the <a href="https://github.com/harshen/jQuery-countdownTimer/blob/master/LICENSE.md">MIT</a> 
 and <a href="https://github.com/harshen/jQuery-countdownTimer/blob/master/LICENSE-GPL.md">GPLv3</a> license.</p>
 <p><a href="#table-of-contents">⬆ back to top</a></p></article>
@@ -536,7 +536,7 @@ and <a href="https://github.com/harshen/jQuery-countdownTimer/blob/master/LICENS
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Oct 24 2017 02:24:57 GMT+0530 (IST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Aug 28 2018 00:36:17 GMT+0530 (IST)
 </footer>
 
 <script> prettyPrint(); </script>
