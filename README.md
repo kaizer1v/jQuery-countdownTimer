@@ -92,12 +92,12 @@ Initialize the `countdowntimer` method with the required options on the span ele
 
 ```js
 <script type="text/javascript">
-	  $(function(){
-	    $("#future_date").countdowntimer({
-	      dateAndTime : "2020/01/01 00:00:00",
-	      size : "lg"
-	    });
-	  });
+  $(function(){
+    $("#future_date").countdowntimer({
+      dateAndTime : "2020/01/01 00:00:00",
+      size : "lg"
+    });
+  });
 </script>
 ```
 
@@ -322,17 +322,17 @@ isRTL                    : false
 - Default: `HMS`
 - Set the display format for countdowntimer. Use the following characters (in order, or out of order) to indicate which time periods you want to display.
 
-	* Y - Years
-	* O - Months
-	* D - Days
-	* H - Hours
-	* M - Minutes
-	* S - Seconds
+  * Y - Years
+  * O - Months
+  * D - Days
+  * H - Hours
+  * M - Minutes
+  * S - Seconds
  
  - If any time period is not displayed, its time value is added to its superior.
  
  - Usage examples (In order)
-	
+  
    * YODHMS
    * ODHMS
    * DHMS
@@ -361,16 +361,16 @@ isRTL                    : false
 
 - Usage examples
   
-	* Time Zone of Los Angeles (Pacific Daylight Time) UTC-7
+  * Time Zone of Los Angeles (Pacific Daylight Time) UTC-7
 
-		* timeZone : -7
-		* timeZone : -420
-		
-	* Time Zone of Singapore (SGT) UTC+8
-	
-		* timeZone : +8
-		* timeZone : +480
-		
+    * timeZone : -7
+    * timeZone : -420
+    
+  * Time Zone of Singapore (SGT) UTC+8
+  
+    * timeZone : +8
+    * timeZone : +480
+    
 #### digits
  
 - Type: `String Array`
@@ -397,27 +397,27 @@ isRTL                    : false
 
 - Use it to Pause / Resume the user defined countdowntimer (hours, minutes, seconds timer).
 
-	```js
-	jQuery("#hms_timer").countdowntimer("pause", "pause");
-	jQuery("#hms_timer").countdowntimer("pause", "resume");
-	```
+  ```js
+  jQuery("#hms_timer").countdowntimer("pause", "pause");
+  jQuery("#hms_timer").countdowntimer("pause", "resume");
+  ```
 
 #### stop
 
 - Use it to Stop / Start the user defined countdowntimer (hours, minutes, seconds timer). When stopped, timer resets to defined values.
 
-	```js
-	jQuery("#hms_timer").countdowntimer("stop", "stop");
-	jQuery("#hms_timer").countdowntimer("stop", "start");
-	```
+  ```js
+  jQuery("#hms_timer").countdowntimer("stop", "stop");
+  jQuery("#hms_timer").countdowntimer("stop", "start");
+  ```
 
 #### destroy
 
 - Use it to destroy the countdowntimer.
 
-	```js
-	jQuery("#hms_timer").countdowntimer("destroy");
-	```
+  ```js
+  jQuery("#hms_timer").countdowntimer("destroy");
+  ```
 
 [⬆ back to top](#table-of-contents)
 
@@ -426,178 +426,178 @@ isRTL                    : false
 Following are the different code samples for using `countdowntimer` method.
 
 * Reverse countdown till a specific future date from today. (for eg:- 2020/01/01 00:00:00)
-	
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			dateAndTime : "2020/01/01 00:00:00"‚
-			labelsFormat : true,
-			displayFormat : "YODHMS",
-			padZeroes : false,
-			timeZone : -7,
-			beforeExpiryTime : "01:01:05:05",
-			beforeExpiryTimeFunction :  beforeExpiryFunc,
-			timeUp : timeIsUp,
-			expiryUrl : "https://www.npmjs.com/package/countdowntimer"
-		});
-		function beforeExpiryFunc() {
-			//Your code
-		}
-		function timeIsUp() {
-			//Your code
-		}								
-	});
-	```
-	
+  
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      dateAndTime : "2020/01/01 00:00:00"‚
+      labelsFormat : true,
+      displayFormat : "YODHMS",
+      padZeroes : false,
+      timeZone : -7,
+      beforeExpiryTime : "01:01:05:05",
+      beforeExpiryTimeFunction :  beforeExpiryFunc,
+      timeUp : timeIsUp,
+      expiryUrl : "https://www.npmjs.com/package/countdowntimer"
+    });
+    function beforeExpiryFunc() {
+      //Your code
+    }
+    function timeIsUp() {
+      //Your code
+    }               
+  });
+  ```
+  
 * Reverse countdown to zero from time set to hours, minutes & seconds.
-	
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			hours : 3‚
-			minutes : 10‚
-			seconds : 10‚
-			displayFormat : "HM",
-			size : "lg",
-			timeSeparator : "/",
-			pauseButton : "pbtnId",
-			stopButton : "sbtnId"
-		});
-	});
-	```
+  
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      hours : 3‚
+      minutes : 10‚
+      seconds : 10‚
+      displayFormat : "HM",
+      size : "lg",
+      timeSeparator : "/",
+      pauseButton : "pbtnId",
+      stopButton : "sbtnId"
+    });
+  });
+  ```
 
 * Reverse countdown to zero from time set to hours and minutes.
-	
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			hours : 3‚
-			minutes : 10‚
-			size : "lg"
-		});
-		function urfunc() {
-			if(yourcond === true) {
-				jQuery("#cdt").countdowntimer("pause", "pause");
-			} else {
-				jQuery("#cdt").countdowntimer("pause", "resume");
-			} 
-			if(yourothercond === true) {
-				jQuery("#cdt").countdowntimer("stop", "stop");	
-			} else {
-				jQuery("#cdt").countdowntimer("stop", "start");
-			}
-			jQuery("#cdt").countdowntimer("destroy");
-		}
-	});
-	```
-	
+  
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      hours : 3‚
+      minutes : 10‚
+      size : "lg"
+    });
+    function urfunc() {
+      if(yourcond === true) {
+        jQuery("#cdt").countdowntimer("pause", "pause");
+      } else {
+        jQuery("#cdt").countdowntimer("pause", "resume");
+      } 
+      if(yourothercond === true) {
+        jQuery("#cdt").countdowntimer("stop", "stop");  
+      } else {
+        jQuery("#cdt").countdowntimer("stop", "start");
+      }
+      jQuery("#cdt").countdowntimer("destroy");
+    }
+  });
+  ```
+  
 * Reverse countdown to zero from time set to minutes and seconds.
-	
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			minutes : 20‚
-			seconds : 10‚
-			size : "lg"
-		});
-	});
-	```
+  
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      minutes : 20‚
+      seconds : 10‚
+      size : "lg"
+    });
+  });
+  ```
 
 * Reverse countdown to zero from time set to hours and seconds.
 
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			hours : 2‚
-			seconds : 10‚
-			size : "lg"
-		});
-	});
-	```
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      hours : 2‚
+      seconds : 10‚
+      size : "lg"
+    });
+  });
+  ```
 
 * Reverse countdown to zero from time set to only hours.
 
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			hours : 2‚
-			size : "lg",
-			tickInterval : 60
-		});
-	});
-	```
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      hours : 2‚
+      size : "lg",
+      tickInterval : 60
+    });
+  });
+  ```
 
 * Reverse countdown to zero from time set to only minutes.
-	
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			minutes : 2‚
-			size : "lg"
-		});
-	});
-	```
+  
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      minutes : 2‚
+      size : "lg"
+    });
+  });
+  ```
 
 * Reverse countdown to zero from time set to only seconds.
 
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			seconds : 25‚
-			size : "lg"
-		});
-	});
-	```
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      seconds : 25‚
+      size : "lg"
+    });
+  });
+  ```
 
 * Display current time.
 
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			currentTime : true‚
-			size : "lg",
-			borderColor : "#5D09FA",
-			backgroundColor : "#FAF209",
-			fontColor : "#FA0909",
-			timeZone : -420
-		});
-	});
-	```
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      currentTime : true‚
+      size : "lg",
+      borderColor : "#5D09FA",
+      backgroundColor : "#FAF209",
+      fontColor : "#FA0909",
+      timeZone : -420
+    });
+  });
+  ```
 
 * Reverse countdown between a given start date (which can be server date and time or any given date) and end date.
 
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-			startDate : "2017/10/10 12:00:00",
-			dateAndTime : "2020/10/10 12:00:00",
-			size : "lg"
-		});
-	});
-	```
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+      startDate : "2017/10/10 12:00:00",
+      dateAndTime : "2020/10/10 12:00:00",
+      size : "lg"
+    });
+  });
+  ```
  
 * For taking startDate as current server date and time.
 
-	```js
+  ```js
         $(function(){
-		$("#cdt").countdowntimer({
-			startDate : "<?php echo date('Y/m/d H:i:s'); ?>",
-			dateAndTime : "2020/10/10 12:00:00",
-			size : "lg",
-			regexpMatchFormat : "([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
-			regexpReplaceWith : "$1<sup>years</sup> / $2<sup>months</sup> / $3<sup>days</sup> / $4<sup>hours</sup> / $5<sup>minutes</sup> / $6<sup>seconds</sup>"
-		});
-	});
-	```
+    $("#cdt").countdowntimer({
+      startDate : "<?php echo date('Y/m/d H:i:s'); ?>",
+      dateAndTime : "2020/10/10 12:00:00",
+      size : "lg",
+      regexpMatchFormat : "([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
+      regexpReplaceWith : "$1<sup>years</sup> / $2<sup>months</sup> / $3<sup>days</sup> / $4<sup>hours</sup> / $5<sup>minutes</sup> / $6<sup>seconds</sup>"
+    });
+  });
+  ```
 
 * If no options are provided, by default timer of 60 seconds is displayed in small size.
 
-	```js
-	$(function(){
-		$("#cdt").countdowntimer({
-		});
-	});
-	```
+  ```js
+  $(function(){
+    $("#cdt").countdowntimer({
+    });
+  });
+  ```
 
 [⬆ back to top](#table-of-contents)
 
