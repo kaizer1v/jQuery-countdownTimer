@@ -6,15 +6,7 @@
 
 ## <a id="Introduction"></a>Introduction
 
-**CountdownTimer** is a reverse count down jQuery plugin for displaying countdown as per need with its different configuration options. It is a perfect match for any coupon, auction site or product launch page. It also displays current time and comes with timezone and many regional languages support.
-
-- [Website](https://harshen.github.io/jQuery-countdownTimer/)
-
-## [Help the project](https://www.paypal.me/harshenpandey/)
-
-This project is looking for help! [You can donate through Paypal](https://www.paypal.me/harshenpandey/)
-and help spread the word. If you've used the plugin, or plan to use, consider a donation - any amount will help.
-
+**CountdownTimer** is a jQuery countdown plugin for counting down time or days and other units. It also displays current time and comes with timezone and many regional languages support.
 
 ## Table of contents
 
