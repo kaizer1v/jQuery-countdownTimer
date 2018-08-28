@@ -50,12 +50,13 @@
   //Definition of private function countdown.
   function countdown($this, options) {
     var opts = $.extend({}, $.fn.countdowntimer.defaults, options);
+    console.log(opts, '<<<<<<<<<<<<<<<<<<');
     $.extend(true, opts, $.fn.countdowntimer.regionalOptions, options);
     $this.data('opts', {
       opts: opts
     });
-    $this.addClass("style");
-    var size = opts.size;
+    // $this.addClass("style");
+    var size = opts.size || 'sm';
     var borderColor = opts.borderColor;
     var fontColor = opts.fontColor;
     var backgroundColor = opts.backgroundColor;
@@ -86,27 +87,7 @@
       $this.addClass("colorDefinition");
     }
     if (opts.labelsFormat === false) {
-      if (options.size !== undefined) {
-        switch (size) {
-          case "xl":
-            $this.addClass("size_xl");
-            break;
-          case "lg":
-            $this.addClass("size_lg");
-            break;
-          case "md":
-            $this.addClass("size_md");
-            break;
-          case "sm":
-            $this.addClass("size_sm");
-            break;
-          case "xs":
-            $this.addClass("size_xs");
-            break;
-        }
-      } else if (size === "sm") {
-        $this.addClass("size_sm");
-      }
+      $this.addClass('size_' + size);
     }
     if (opts.isRTL === true) {
       $this.addClass("lang-rtl");

@@ -81,17 +81,17 @@
 <script type="text/javascript" src="src/js/jQuery.countdownTimer.js"></script>
 <script type="text/javascript">
   $(function() {
+    $('#future_date').countdowntimer({
+      dateAndTime: "2020/01/01 00:00:00",
+      labelsFormat: true,
+      displayFormat: "YODHMS"
+    });
+
     $('#hms_timer').countdowntimer({
       hours: 3,
       minutes: 10,
       seconds: 10,
       size: "lg"
-    });
-
-    $('#future_date').countdowntimer({
-      dateAndTime: "2020/01/01 00:00:00",
-      labelsFormat: true,
-      displayFormat: "YODHMS"
     });
   });
 </script>
