@@ -68,15 +68,15 @@
     $this.addClass(opts.style);
     
     if(
-      options.regexpMatchFormat !== undefined &&
-      options.regexpReplaceWith !== undefined &&
-      options.timeSeparator === undefined &&
-      options.labelsFormat === undefined
+      opts.regexpMatchFormat !== undefined &&
+      opts.regexpReplaceWith !== undefined &&
+      opts.timeSeparator === undefined &&
+      opts.labelsFormat === undefined
     ) {
-      window['regexpMatchFormat_' + $this.attr('id')] = options.regexpMatchFormat;
-      window['regexpReplaceWith_' + $this.attr('id')] = options.regexpReplaceWith;
+      window['regexpMatchFormat_' + $this.attr('id')] = opts.regexpMatchFormat;
+      window['regexpReplaceWith_' + $this.attr('id')] = opts.regexpReplaceWith;
     }
-    if (options.displayFormat !== undefined) {
+    if (opts.displayFormat !== undefined) {
       var format = [];
       format[0] = (opts.displayFormat.match('Y') ? '!' : '#');
       format[1] = (opts.displayFormat.match('O') ? '!' : '#');
@@ -458,6 +458,8 @@
     var startDate = (type === "withnoStart") ? window['startTime' + id] : window['startDate' + id];
     var totalSeconds = ((endDate - startDate) / 1000);
     var time = "";
+
+    // generate a time and display it
     if ((endDate - startDate) > 0) {
       if (type === "withStart" && (startDate > (new Date()))) {
         time = prepareTime($this, opts, 0, 0, 0, 0, 0, 0);
