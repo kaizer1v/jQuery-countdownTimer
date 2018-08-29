@@ -8,6 +8,16 @@
  */
 /* jQuery.countdownTimer.js*/
 
+
+/*
+  Usage:
+
+  $('div').countdown({
+    from: new Date(),
+    
+  })
+
+*/
 (function($) {
   "use strict";
 
@@ -47,20 +57,22 @@
     }
   };
 
-  //Definition of private function countdown.
   function countdown($this, options) {
     var opts = $.extend({}, $.fn.countdowntimer.defaults, options);
-    console.log(opts, '<<<<<<<<<<<<<<<<<<');
     $.extend(true, opts, $.fn.countdowntimer.regionalOptions, options);
-    $this.data('opts', {
-      opts: opts
-    });
-    // $this.addClass("style");
-    var size = opts.size || 'sm';
-    var borderColor = opts.borderColor;
-    var fontColor = opts.fontColor;
-    var backgroundColor = opts.backgroundColor;
-    if (options.regexpMatchFormat !== undefined && options.regexpReplaceWith !== undefined && options.timeSeparator === undefined && options.labelsFormat === undefined) {
+    $this.data('opts', { opts: opts });     // why ??
+    var size = opts.size;
+    var style = opts.style;
+
+    // add class
+    $this.addClass(opts.style);
+    
+    if(
+      options.regexpMatchFormat !== undefined &&
+      options.regexpReplaceWith !== undefined &&
+      options.timeSeparator === undefined &&
+      options.labelsFormat === undefined
+    ) {
       window['regexpMatchFormat_' + $this.attr('id')] = options.regexpMatchFormat;
       window['regexpReplaceWith_' + $this.attr('id')] = options.regexpReplaceWith;
     }
@@ -76,16 +88,7 @@
     } else {
       opts.displayFormat = "###!!!";
     }
-    if (options.borderColor !== undefined || options.fontColor !== undefined || options.backgroundColor !== undefined) {
-      var customStyle = {
-        "background": backgroundColor,
-        "color": fontColor,
-        "border-color": borderColor
-      };
-      $this.css(customStyle);
-    } else {
-      $this.addClass("colorDefinition");
-    }
+
     if (opts.labelsFormat === false) {
       $this.addClass('size_' + size);
     }
@@ -680,11 +683,13 @@
     startDate: new Date(),
     dateAndTime: new Date("1970/01/01 00:00:00"),
     currentTime: false,
+
+    // styling
     size: "sm",
-    borderColor: "#F0068E",
-    fontColor: "#FFFFFF",
-    backgroundColor: "#000000",
+    style: "theme_1",
     timeSeparator: ":",
+
+    // operational
     tickInterval: 1,
     timeUp: null,
     expiryUrl: null,
